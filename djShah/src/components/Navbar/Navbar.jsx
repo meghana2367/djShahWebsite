@@ -1,18 +1,29 @@
 import React from 'react';
 import './Navbar.css';
-import { IoIosSearch } from "react-icons/io";
+import { FaInstagram } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { AiFillTikTok } from "react-icons/ai";
+
 
 const Navbar = () => {
     return (
         <div className='navbar'>
-            <h1 className='logo'>DJ SHAH</h1>
+            <h1 className='logo'>DJ SHXH</h1>
             <ul>
-                <li>Home</li>
-                <li>Contact</li>
-                <li>Gallery</li>
-                <li>About</li>
+                <li>HOME</li>
+                <li>CONTACT</li>
+                <li>GALLERY</li>
+                <li>ABOUT</li>
             </ul>
-            <IoIosSearch className='searchBtn'/>
+            <a href="https://www.instagram.com/dj.shxh/?__d=11" target="_blank" rel="noopener noreferrer">
+                <FaInstagram className='icon' />
+            </a>
+            <a href="https://www.tiktok.com/@dj.shxh" target="_blank" rel="noopener noreferrer">
+                <AiFillTikTok className='icon'/>
+            </a>
+            <a href="https://www.youtube.com/@djshxh/videos" target="_blank" rel="noopener noreferrer">
+                <FaYoutube className='icon' />
+            </a>
         </div>
     )
 }
