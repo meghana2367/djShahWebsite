@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import Navbar from './components/Navbar';
-import './App.css'
+import Navbar from './components/Navbar/Navbar.jsx';
+import './index.css';
 
 function App() {
 
   return (
-    <div >
+    <div className='container'>
       <Navbar />
     </div>
   )
