@@ -1,18 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './Navbar.css';
-import { FaInstagram } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaYoutube } from "react-icons/fa";
 import { AiFillTikTok } from "react-icons/ai";
-import Eventbar from '../Eventbar/Eventbar';
 
+const Navbar = ({ openDrawerRight }) => {
+    console.log('Navbar received openDrawerRight:', openDrawerRight);
 
-const Navbar = () => {
-    const showEventBar = () => {
-        setEventBarOpen(true);
-    };
-
-    const closeEventBar = () => {
-        setEventBarOpen(false);
+    const handleEventsClick = () => {
+        console.log('EVENTS clicked');
+        openDrawerRight(); // Invoke the prop function to open the drawer
     };
 
     return (
@@ -20,7 +16,7 @@ const Navbar = () => {
             <h1 className='logo'>DJ SHXH</h1>
             <ul>
                 <li>HOME</li>
-                <li onClick={showEventBar}>EVENTS</li>
+                <li onClick={handleEventsClick}>EVENTS</li>
                 <li>CONTACT</li>
                 <li>GALLERY</li>
                 <li>ABOUT</li>
@@ -35,7 +31,7 @@ const Navbar = () => {
                 <FaYoutube className='icon' />
             </a>
         </div>
-    )
+    );
 }
 
 export default Navbar;
